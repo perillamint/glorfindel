@@ -1,0 +1,19 @@
+{
+  "name": "tlsmon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "tls",
+    "censorship",
+    "korea"
+  ],
+  "author": "perillamint",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
