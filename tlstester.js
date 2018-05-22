@@ -43,19 +43,16 @@ class TLSTester extends EventEmitter {
             });
 
             rawconn.on('connect', () => {
-                console.log('conn established!');
                 const tlsconn = new tls.connect({
                     socket: tee,
                     servername: this._target.sni
                 });
 
                 tlsconn.on('secureConnect', () => {
-                    console.log('Secure connection established!');
                     tlsconn.end();
                 });
 
                 tlsconn.on('error', (e) => {
-                    console.log('Secure connection error');
                     tlserror = e;
                     rawconn.end();
                 });
@@ -66,7 +63,6 @@ class TLSTester extends EventEmitter {
             });
 
             rawconn.on('error', (e) => {
-                console.error(e);
                 ful({
                     status: 'connecton failure',
                     commLog: [],
