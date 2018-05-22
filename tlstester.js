@@ -22,7 +22,6 @@ class TLSTester extends EventEmitter {
             const teeRecord = [];
             let tlserror = null;
 
-            // TODO: Tee recorder
             tee.on('rx', (data) => {
                 teeRecord.push({
                     timestamp: new Date().getTime(),
